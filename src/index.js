@@ -3,12 +3,12 @@ import express from "express";
 import mongoose from "mongoose";
 import { DB_name } from "./constants.js";
 import connectDb from "./db/index.js";
+import { app } from "./app.js";
 
 dotenv.config({
     path: "./.env"
 });
 
-const app = express();
 
 connectDb()
     .then(() => {
